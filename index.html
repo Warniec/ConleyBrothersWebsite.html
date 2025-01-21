@@ -13,38 +13,27 @@
             box-sizing: border-box;
         }
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             line-height: 1.6;
-            margin: 0;
             color: #333;
-        }
-        /* Header */
-        header {
-            background: linear-gradient(to right, #004c99, #0073e6);
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
-        header h1 {
             margin: 0;
-            font-size: 2.5rem;
         }
-        header p {
-            margin: 5px 0;
-            font-size: 1.2rem;
-        }
-        /* Navigation */
+        /* Navigation Bar */
         nav {
-            background: #003366;
-            padding: 10px 0;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px;
+            z-index: 1000;
+            transition: background 0.3s ease;
         }
         nav ul {
             display: flex;
-            justify-content: center;
             list-style: none;
-            margin: 0;
-            padding: 0;
         }
         nav ul li {
             margin: 0 15px;
@@ -58,110 +47,175 @@
         nav ul li a:hover {
             color: #00ccff;
         }
-        /* Container */
-        .container {
-            padding: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: url('https://via.placeholder.com/1920x1080') center/cover no-repeat;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
         }
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        .hero a {
+            display: inline-block;
+            padding: 10px 30px;
+            margin: 10px;
+            font-size: 1rem;
+            color: white;
+            background: #0073e6;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .hero a:hover {
+            background: #005bb5;
+        }
+        /* Section Styling */
         section {
-            margin-bottom: 40px;
+            padding: 60px 20px;
+        }
+        section:nth-child(even) {
+            background: #f9f9f9;
         }
         section h2 {
             text-align: center;
+            font-size: 2.5rem;
             margin-bottom: 20px;
-            font-size: 2rem;
-            color: #004c99;
         }
         section p {
             text-align: center;
-            margin-bottom: 15px;
             font-size: 1.1rem;
+            margin-bottom: 40px;
         }
         /* Services */
-        .services ul {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            list-style: none;
-            padding: 0;
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
         }
-        .services ul li {
-            background: #f4f4f4;
-            border: 1px solid #ddd;
+        .service {
+            background: white;
+            padding: 20px;
             border-radius: 8px;
-            margin: 10px;
-            padding: 15px;
-            width: 300px;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             text-align: center;
             transition: transform 0.3s;
         }
-        .services ul li:hover {
+        .service:hover {
             transform: translateY(-5px);
         }
-        /* Portfolio */
-        .portfolio p {
-            margin-bottom: 20px;
-        }
-        /* Contact */
-        .contact p {
+        .service h3 {
+            font-size: 1.5rem;
             margin-bottom: 10px;
-            text-align: center;
+        }
+        .service p {
+            font-size: 1rem;
+            color: #666;
+        }
+        /* Portfolio */
+        .portfolio {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .portfolio img {
+            width: 100%;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+        .portfolio img:hover {
+            transform: scale(1.05);
         }
         /* Footer */
         footer {
             background: #003366;
             color: white;
             text-align: center;
-            padding: 10px 0;
-            margin-top: 20px;
-            font-size: 0.9rem;
+            padding: 20px 0;
+        }
+        footer a {
+            color: #00ccff;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Restoring the Past, Protecting the Future</h1>
-        <p>Expert Masonry Restoration and Waterproofing Solutions</p>
-    </header>
     <nav>
+        <div class="logo">Your Logo</div>
         <ul>
-            <li><a href="#about">About Us</a></li>
+            <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
-    <div class="container">
-        <section id="about" class="about">
-            <h2>Who We Are</h2>
-            <p>At [Your Business Name], we bring decades of expertise in masonry restoration and renovation. Our skilled craftsmen are dedicated to preserving the structural integrity and aesthetic charm of commercial, historical, and residential buildings.</p>
-        </section>
-        <section id="services" class="services">
-            <h2>Our Specialized Services</h2>
-            <ul>
-                <li><strong>Repointing and Tuckpointing:</strong> Restore the structural integrity and beauty of brickwork.</li>
-                <li><strong>Brick Repair:</strong> Repair damaged bricks to preserve charm and longevity.</li>
-                <li><strong>Waterproofing and Sealing:</strong> Protect your building from water intrusion.</li>
-                <li><strong>Facade Cleaning:</strong> Rejuvenate your property with professional cleaning solutions.</li>
-                <li><strong>Historical Restoration:</strong> Specialized care for preserving authenticity.</li>
-            </ul>
-        </section>
-        <section id="portfolio" class="portfolio">
-            <h2>Our Work Speaks for Itself</h2>
-            <p>Explore our gallery of successful restoration projects, showcasing our dedication to quality and detail.</p>
-        </section>
-        <section id="contact" class="contact">
-            <h2>Get In Touch</h2>
-            <p>Have questions or ready to start your restoration project? We’d love to hear from you!</p>
-            <p><strong>Phone:</strong> [Your Phone Number]</p>
-            <p><strong>Email:</strong> [Your Email Address]</p>
-            <p><strong>Address:</strong> [Your Business Address]</p>
-        </section>
+    <div class="hero">
+        <h1>Restoring the Past, Protecting the Future</h1>
+        <p>Your trusted partner in masonry restoration and waterproofing.</p>
+        <a href="#services">Our Services</a>
+        <a href="#contact">Contact Us</a>
     </div>
+    <section id="about">
+        <h2>About Us</h2>
+        <p>We specialize in expert masonry restoration, preserving the beauty and integrity of buildings for future generations.</p>
+    </section>
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="services">
+            <div class="service">
+                <h3>Repointing</h3>
+                <p>Enhance structural integrity and aesthetics with our expert repointing services.</p>
+            </div>
+            <div class="service">
+                <h3>Brick Repair</h3>
+                <p>Preserve the charm of your building with professional brick repairs.</p>
+            </div>
+            <div class="service">
+                <h3>Waterproofing</h3>
+                <p>Protect your property from water damage with advanced waterproofing solutions.</p>
+            </div>
+        </div>
+    </section>
+    <section id="portfolio">
+        <h2>Our Portfolio</h2>
+        <div class="portfolio">
+            <img src="https://via.placeholder.com/300" alt="Project 1">
+            <img src="https://via.placeholder.com/300" alt="Project 2">
+            <img src="https://via.placeholder.com/300" alt="Project 3">
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Get in touch with us to discuss your restoration needs.</p>
+        <p><strong>Phone:</strong> [Your Phone Number]</p>
+        <p><strong>Email:</strong> [Your Email Address]</p>
+    </section>
     <footer>
-        <p>&copy; 2025 [Your Business Name]. All rights reserved.</p>
+        <p>&copy; 2025 [Your Business Name]. All rights reserved. | <a href="#">Privacy Policy</a></p>
     </footer>
 </body>
 </html>
