@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Expert masonry restoration and waterproofing solutions for commercial and historical buildings.">
-    <title>Commercial Masonry Restoration</title>
+    <title>Conley Brothers Inc. - Masonry Restoration</title>
     <style>
         /* General Reset */
         * {
@@ -13,30 +13,33 @@
             box-sizing: border-box;
         }
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Arial', sans-serif;
             line-height: 1.6;
             color: #333;
-            margin: 0;
+            background-color: #f4f4f4;
         }
         /* Navigation Bar */
         nav {
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(0, 0, 0, 0.8);
+            background: #003366;
             color: white;
             display: flex;
             justify-content: space-between;
-            padding: 10px 20px;
+            align-items: center;
+            padding: 15px 30px;
             z-index: 1000;
-            transition: background 0.3s ease;
+        }
+        .logo img {
+            height: 60px;
         }
         nav ul {
             display: flex;
             list-style: none;
         }
         nav ul li {
-            margin: 0 15px;
+            margin: 0 20px;
         }
         nav ul li a {
             color: white;
@@ -49,8 +52,8 @@
         }
         /* Hero Section */
         .hero {
-            height: 100vh;
-            background: url('https://via.placeholder.com/1920x1080') center/cover no-repeat;
+            height: 90vh;
+            background: url('https://conleybrothers.org/hero-image.jpg') center/cover no-repeat;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -70,82 +73,44 @@
             z-index: -1;
         }
         .hero h1 {
-            font-size: 3.5rem;
+            font-size: 4rem;
             margin-bottom: 20px;
+            font-weight: bold;
         }
         .hero p {
-            font-size: 1.2rem;
+            font-size: 1.5rem;
             margin-bottom: 30px;
         }
         .hero a {
             display: inline-block;
-            padding: 10px 30px;
-            margin: 10px;
-            font-size: 1rem;
+            padding: 12px 35px;
+            font-size: 1.2rem;
             color: white;
-            background: #0073e6;
+            background: #005bb5;
             text-decoration: none;
             border-radius: 5px;
             transition: background 0.3s;
         }
         .hero a:hover {
-            background: #005bb5;
+            background: #003366;
         }
-        /* Section Styling */
+        /* Sections */
         section {
             padding: 60px 20px;
-        }
-        section:nth-child(even) {
-            background: #f9f9f9;
-        }
-        section h2 {
             text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-        section p {
-            text-align: center;
-            font-size: 1.1rem;
-            margin-bottom: 40px;
-        }
-        /* Services */
-        .services {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-        .service {
             background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            transition: transform 0.3s;
-        }
-        .service:hover {
-            transform: translateY(-5px);
-        }
-        .service h3 {
-            font-size: 1.5rem;
             margin-bottom: 10px;
         }
-        .service p {
-            font-size: 1rem;
-            color: #666;
-        }
-        /* Portfolio */
-        .portfolio {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        .services, .portfolio {
+            display: flex;
+            justify-content: center;
             gap: 20px;
+            flex-wrap: wrap;
         }
-        .portfolio img {
-            width: 100%;
+        .service, .portfolio img {
+            width: 30%;
             border-radius: 8px;
-            transition: transform 0.3s;
-        }
-        .portfolio img:hover {
-            transform: scale(1.05);
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
         }
         /* Footer */
         footer {
@@ -154,18 +119,13 @@
             text-align: center;
             padding: 20px 0;
         }
-        footer a {
-            color: #00ccff;
-            text-decoration: none;
-        }
-        footer a:hover {
-            text-decoration: underline;
-        }
     </style>
 </head>
 <body>
     <nav>
-        <div class="logo">Your Logo</div>
+        <div class="logo">
+            <img src="https://conleybrothers.org/logo.png" alt="Conley Brothers Logo">
+        </div>
         <ul>
             <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
@@ -174,8 +134,8 @@
         </ul>
     </nav>
     <div class="hero">
-        <h1>Restoring the Past, Protecting the Future</h1>
-        <p>Your trusted partner in masonry restoration and waterproofing.</p>
+        <h1>Restoring Excellence in Masonry</h1>
+        <p>Preserving and Protecting Structures for Over 55 Years</p>
         <a href="#services">Our Services</a>
         <a href="#contact">Contact Us</a>
     </div>
@@ -186,36 +146,26 @@
     <section id="services">
         <h2>Our Services</h2>
         <div class="services">
-            <div class="service">
-                <h3>Repointing</h3>
-                <p>Enhance structural integrity and aesthetics with our expert repointing services.</p>
-            </div>
-            <div class="service">
-                <h3>Brick Repair</h3>
-                <p>Preserve the charm of your building with professional brick repairs.</p>
-            </div>
-            <div class="service">
-                <h3>Waterproofing</h3>
-                <p>Protect your property from water damage with advanced waterproofing solutions.</p>
-            </div>
+            <div class="service">Repointing</div>
+            <div class="service">Brick Repair</div>
+            <div class="service">Waterproofing</div>
         </div>
     </section>
     <section id="portfolio">
         <h2>Our Portfolio</h2>
         <div class="portfolio">
-            <img src="https://via.placeholder.com/300" alt="Project 1">
-            <img src="https://via.placeholder.com/300" alt="Project 2">
-            <img src="https://via.placeholder.com/300" alt="Project 3">
+            <img src="https://conleybrothers.org/project1.jpg" alt="Project 1">
+            <img src="https://conleybrothers.org/project2.jpg" alt="Project 2">
+            <img src="https://conleybrothers.org/project3.jpg" alt="Project 3">
         </div>
     </section>
     <section id="contact">
         <h2>Contact Us</h2>
-        <p>Get in touch with us to discuss your restoration needs.</p>
         <p><strong>Phone:</strong> (757)-481-4111</p>
         <p><strong>Email:</strong> <a href="mailto:estimates@conleybrothers.org">estimates@conleybrothers.org</a></p>
     </section>
     <footer>
-        <p>&copy; 2025 [Your Business Name]. All rights reserved. | <a href="#">Privacy Policy</a></p>
+        <p>&copy; 2025 Conley Brothers Inc. All rights reserved.</p>
     </footer>
 </body>
 </html>
